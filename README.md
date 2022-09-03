@@ -65,7 +65,7 @@ public ${STATIC} function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT
 ## PHP Fluent Setter Method
 
 ```php
-public function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT} #else#end$${PARAM_NAME})#if(${RETURN_TYPE}): ${CLASS_NAME}#else#end
+public function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT} #else#end$${PARAM_NAME})#if(${RETURN_TYPE}): self#else#end
 {
     $this->${FIELD_NAME} = $${PARAM_NAME};
     return $this;
@@ -82,4 +82,15 @@ public function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT} #else#en
 public function should${CAPITALIZED_NAME}(): void
 {
 }
+```
+
+# Live Templates
+
+```xml
+<template name="notImplemented" value="throw new \RuntimeException('Please, implement the method.');"
+          description="not implemented exception" toReformat="true" toShortenFQNames="true">
+  <context>
+    <option name="PHP Statement" value="true" />
+  </context>
+</template>
 ```
