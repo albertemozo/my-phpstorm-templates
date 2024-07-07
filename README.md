@@ -76,9 +76,7 @@ public function set${NAME}(#if (${SCALAR_TYPE_HINT})${SCALAR_TYPE_HINT} #else#en
 ## PHPUnit Test Method
 
 ```php
-/**
- * @test
- */
+#[Test]
 public function should${CAPITALIZED_NAME}(): void
 {
 }
