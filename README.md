@@ -25,7 +25,7 @@ class ${NAME} {
 }
 ```
 
-## PHPUnit Test
+## PHPUnit 6 Test
 
 ```php
 <?php
@@ -40,9 +40,10 @@ use ${TESTED_NAME};
 #elseif (${TESTED_NAME} && ${TESTED_NAMESPACE} && ${NAMESPACE} != ${TESTED_NAMESPACE})
 use ${TESTED_NAMESPACE}\\${TESTED_NAME};
 #end
+use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
-class ${NAME} extends#if(${NAMESPACE}) \PHPUnit_Framework_TestCase #else PHPUnit_Framework_TestCase #end{
+class ${NAME} extends TestCase {
 
 }
 ```
